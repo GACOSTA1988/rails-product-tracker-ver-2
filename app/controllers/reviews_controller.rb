@@ -1,27 +1,27 @@
 class ReviewsController < ApplicationController
     def new
-      @project = Project.find(params[:project_id])
-      @review = @project.reviews.new
+      @product = Product.find(params[:product_id])
+      @review = @product.reviews.new
       render :new
     end
     def create
-        @project = Project.find(params[:project_id])
-        @review = @project.reviews.new(review_params)
+        @product = Product.find(params[:product_id])
+        @review = @product.reviews.new(review_params)
         if @review.save
-          redirect_to project_path(@project)
+          redirect_to product_path(@product)
         else
           render :new
         end
       end
     
       def show
-        @project = Project.find(params[:project_id])
+        @product = Product.find(params[:product_id])
         @review = Review.find(params[:id])
         render :show
       end
       
       def edit
-        @project = Project.find(params[:project_id])
+        @product = Product.find(params[:product_id])
         @review = Review.find(params[:id])
         render :edit
       end
@@ -29,7 +29,7 @@ class ReviewsController < ApplicationController
       def update
         @review = Review.find(params[:id])
         if @review.update(review_params)
-          redirect_to project_path(@review.project)
+          redirect_to product_path(@review.product)
         else
           render :edit
         end
@@ -38,7 +38,7 @@ class ReviewsController < ApplicationController
       def destroy
         @review = Review.find(params[:id])
         @review.destroy
-        redirect_to project_path(@review.project)
+        redirect_to product_path(@review.product)
       end
 
       private
