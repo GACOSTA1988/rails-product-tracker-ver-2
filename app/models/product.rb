@@ -1,4 +1,6 @@
 class Product < ApplicationRecord
     has_many :reviews, dependent: :destroy
-    it { should validate_presence_of :name }
+    validates :name, presence: true
+    validates :cost, presence: true
+    validates :country_of_origin, presence: true
   end
