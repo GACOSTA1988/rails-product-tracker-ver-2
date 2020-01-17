@@ -1,24 +1,30 @@
-# README
+# Food Product Tracker
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### This application allows you track products and it's associated reviews.
 
-Things you may want to cover:
+#### By George Acosta
 
-* Ruby version
+## Specifications
 
-* System dependencies
+1. This program will let users add, update and delete new products.
+2. This program will allow to click an individual product to see its detail page.
+3. This program will allow you to be able to add a review to a product.
 
-* Configuration
 
-* Database creation
 
-* Database initialization
 
-* How to run the test suite
+## Setup/Installation Requirements
 
-* Services (job queues, cache servers, search engines, etc.)
+* Open terminal and run rails s while in the projects root directory.
 
-* Deployment instructions
 
-* ...
+## Technologies Used
+
+1. ruby
+2. rspecß
+
+
+
+### License
+
+Copyright (c) 2016 **_George Acosta_**
