@@ -11,7 +11,7 @@ Product.destroy_all
     products =[]
     products.push(Product.create!(name: Faker::Beer.name, cost: "2", country_of_origin: "US"))
     products
-    250.times do |review|
+    5.times do |review|
         products.each do |product|
         Review.create! :author => Faker::Superhero.name, :content_body => "Nam quis nulla. Integer malesuada. In in enim a arcu imperdiet malesuada. Sed vel lectus. Donec odio", :rating => "2", :product_id => product.id
       end
