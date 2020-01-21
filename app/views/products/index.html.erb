@@ -9,6 +9,20 @@
 <% else %>
   <p>There are no products yet.</p>
 <% end %>
-
+<form>
+  <label for="product with most reviews">Want to see the product with most reviews? </label>
+  <input type="hidden" name="most_reviews" >
+  <button type="submit" name="button">Click here!</button>
+</form>
+<form>
+  <label for="most recent three products">Want to see the threw most recent products? </label>
+  <input type="hidden" name="newest_three_products" >
+  <button type="submit" name="button">Click here!</button>
+</form>
+<form>
+  <label for="products made in USA">Want to see the products made in USA? </label>
+  <input type="hidden" name="usa_product" >
+  <button type="submit" name="button">Click here!</button>
+</form>
 
 <p><%= link_to "Create new product", new_product_path %></p>
