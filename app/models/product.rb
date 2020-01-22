@@ -6,6 +6,7 @@ class Product < ApplicationRecord
     before_save(:titleize_product)
     scope :most_recent, -> (product_parameter) { order(created_at: :desc).limit(3) }
     scope :made_in_usa, -> (product_parameter) { where(country_of_origin: "USA") }
+    scope :most_reviews, -> (product_parameter) {( select("products.id, products.name, count(reviews.id) as reviews_count").joins(:reviews).group("products.id").order("reviews_count DESC").limit(1) )}
 
     private
       def titleize_product

@@ -5,6 +5,8 @@ class ProductsController < ApplicationController
         @products = Product.made_in_usa(params[:made_in_usa])
       elsif params[:most_recent]
         @products = Product.most_recent(params[:most_recent])
+      elsif params[:most_reviews]
+        @products = Product.most_reviews(params[:most_reviews])
       else params[:id]
         @products = Product.all
         render :index
