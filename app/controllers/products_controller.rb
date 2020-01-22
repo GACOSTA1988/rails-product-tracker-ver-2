@@ -1,9 +1,15 @@
 class ProductsController < ApplicationController
 
     def index
+      if params[:made_in_usa]
+        @products = Product.made_in_usa(params[:made_in_usa])
+      elsif params[:most_recent]
+        @products = Product.most_recent(params[:most_recent])
+      else params[:id]
         @products = Product.all
         render :index
       end
+    end
 
       def new
         @product = Product.new
