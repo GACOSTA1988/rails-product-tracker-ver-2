@@ -6,9 +6,11 @@
 
 ## Specifications
 
-1. This program will let users add, update and delete new products.
-2. This program will allow to click an individual product to see its detail page.
-3. This program will allow you to be able to add a review to a product.
+1. This program will let admins add, update and delete new products.
+2. This program will let users add products.
+3. This program will allow users to be able to add a review to a product.
+4. This program will allow to click an individual product to see its detail page.
+5. This program will allow you to be able to add a review to a product.
 
 
 
@@ -21,7 +23,8 @@
 ## Technologies Used
 
 1. ruby
-2. rspecß
+2. rspec
+3. Devise
 
 
 
