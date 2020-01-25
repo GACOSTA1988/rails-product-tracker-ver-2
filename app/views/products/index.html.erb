@@ -9,6 +9,11 @@
 <% else %>
   <p>There are no products yet.</p>
 <% end %>
+
+<% if current_user %>
+<p><%= link_to "Create new product", new_product_path %></p>
+<% end %>
+
 <form>
   <label for="product with most reviews">Want to see the product with most reviews? </label>
   <input type="hidden" name="most_reviews" >
@@ -25,7 +30,3 @@
   <button type="submit" name="button">Click here!</button>
 </form>
 
-<% if current_user && current_user.admin %>
-
-<p><%= link_to "Create new product", new_product_path %></p>
-<% end %>
