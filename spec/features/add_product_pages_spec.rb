@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe('Create a division path', { :type => :feature } ) do
+describe('Create a product path', { :type => :feature } ) do
 before(:each) do
   visit('/products')
   find_link('Sign Up').click
@@ -10,7 +10,7 @@ before(:each) do
   click_on('Sign up')
 end
 
-  it('creates a division and then goes to divisions page') do
+  it('creates a product and then goes to products page') do
     visit('/products')
     # click_on("View Current Divisions")
     click_on("Create new product")
